@@ -1,9 +1,19 @@
 
+<!DOCTYPE HTML>   
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>  
+        <script>  
+          socket = io.connect('/');
+          socket.on('reload', function() { location.reload() });
+        </script>  
 
-  Cash Register
-    Module C
-      ✓ should have a getChange Method 
-
-
-  1 passing (9ms)
-
+        <title>Console Output</title>
+        <script type="text/javascript" src="js/handlebars.js"></script>
+    </head>
+    <body>
+        <script id="console" type="x-handlebars-template">​
+            {{consoleOutput}}
+        ​</script>     
+    </body>
+</html>
