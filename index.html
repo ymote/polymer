@@ -1,1 +1,23 @@
+<<<<<<< HEAD
 <p>Hellow Polymer!</p>
+=======
+
+<!DOCTYPE HTML>   
+<html>
+    <head>
+        <script src="/socket.io/socket.io.js"></script>  
+        <script>  
+          socket = io.connect('/');
+          socket.on('reload', function() { location.reload() });
+        </script>  
+
+        <title>Console Output</title>
+        <script type="text/javascript" src="js/handlebars.js"></script>
+    </head>
+    <body>
+        <script id="console" type="x-handlebars-template">​
+            {{consoleOutput}}
+        ​</script>     
+    </body>
+</html>
+>>>>>>> 63ab092f15206be4f2bda7e5aed6bbe4cdf7d22f
