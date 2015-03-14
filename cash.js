@@ -8,7 +8,7 @@ C.coins = [5000, 2000, 1000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
  * @returns {Array} [500,20,5] the array equivalent of the change
  */
 
-C.getChange = function (totalPayable, cashPaid) {
+C.getChange1 = function (totalPayable, cashPaid) {
     'use strict';
     // if(isNaN(totalPayable) || isNaN(cashPaid)) {
     //     throw new Error("totalPayable and cashPaid MUST both be numbers");
