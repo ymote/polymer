@@ -2,11 +2,10 @@
 var hyperstream = require('hyperstream');
 var fs = require('fs');
 
-
-
 var hs = hyperstream({
-    '#console-box': fs.createReadStream(__dirname + '/console.log'),
+    '#console-box': process.stdin
 });
+
 
 var ws = fs.createWriteStream(__dirname + '/index.html');
 var rs = fs.createReadStream(__dirname + '/index.tmpl');
