@@ -16,16 +16,18 @@ C.getChange = function (totalPayable, cashPaid) {
 
     var change = [], length = C.coins.length,
     remaining = cashPaid - totalPayable; // we reduce this below
-    for(i=0;i<length;i++)
+    for(var i=0; i<length; i++)
     {
-      coin = C.coins[i];
-      remaining = remain/coin;
-      if(remaining > 1)
+      var coin = C.coins[i];
+      if(remaining/coin >= 1)
       {
-        for(j=0;j<Math.floor(remaining/coin);j++)
+        var time = Math.floor(remaining/coin)
+        console.log("number of coins needed", time);
+        for(var j=0; j<time; j++)
         {
           remaining = remaining - coin;
           change.push(coin);
+          console.log("reduced remaining", j, remaining);
         }
       }
     }
@@ -35,3 +37,5 @@ C.getChange = function (totalPayable, cashPaid) {
 
 
 console.log("the change is ", C.getChange(256, 300));
+
+module.exports = C;  
