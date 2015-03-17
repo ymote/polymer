@@ -17,20 +17,7 @@ C.getChange = function (totalPayable, cashPaid) {
     var change = [], length = C.coins.length,
     remaining = cashPaid - totalPayable; // we reduce this below
 
-    for (var i = 0; i < length; i++) { // loop through array of notes & coins:
-        var coin = C.coins[i];
-
-        if(remaining/coin >= 1) { // check coin fits into the remaining amount
-            var times = Math.floor(remaining/coin); // no partial coins
-            // console.log('Coin: '+coin+' fits in '+remaining +' x ' +times);
-
-            for(var j = 0; j < times; j++) { // add coin to change array x times
-                change.push(coin);
-                remaining = remaining - coin; // reduce remaining amount by coin
-            }
-        }
-    }
-    // console.log(change); // print change array to console for feedback
+ 
     return change
 };
 
