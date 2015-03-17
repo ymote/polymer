@@ -16,7 +16,19 @@ C.getChange = function (totalPayable, cashPaid) {
 
     var change = [], length = C.coins.length,
     remaining = cashPaid - totalPayable; // we reduce this below
-
+    for(i=0;i<length;i++)
+    {
+      coin = C.coins[i];
+      remaining = remain/coin;
+      if(remaining > 1)
+      {
+        for(j=0;j<Math.floor(remaining/coin);j++)
+        {
+          remaining = remaining - coin;
+          change.push(coin);
+        }
+      }
+    }
  
     return change
 };
