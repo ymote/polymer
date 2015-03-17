@@ -21,4 +21,5 @@ C.getChange = function (totalPayable, cashPaid) {
     return change
 };
 
-module.exports = C;         // export the module with a single method
+
+console.log("the change is ", C.getChange(256, 300));
