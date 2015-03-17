@@ -16,8 +16,6 @@ C.getChange = function (totalPayable, cashPaid) {
 
     var change = [], length = C.coins.length,
     remaining = cashPaid - totalPayable; // we reduce this below
-    // console.log('\n TotalPayable: '+totalPayable +' | cashPaid: '+cashPaid);
-    // console.log('Difference: '+remaining +' ('+cashPaid+'-'+totalPayable+')');
 
     for (var i = 0; i < length; i++) { // loop through array of notes & coins:
         var coin = C.coins[i];
