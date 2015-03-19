@@ -4,12 +4,12 @@ check("array-solution.js", "array.js", function(error, details){
     
     if(!error)
     {
-        console.log("FAIL, The solution is failed, here is the difference", error, details.diff);
+        console.log("FAIL, cd The solution is failed, here is the difference", error, details.diff);
         
     }else
     {
         
-        console.log("PASS, the solution is passed");
+        console.log("passing, the solution is passed");
     }
     
 })
