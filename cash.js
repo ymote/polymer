@@ -15,7 +15,7 @@ C.getChange = function (totalPayable, cashPaid) {
     'use strict';
 
     var change = [], length = C.coins.length,
-    remaining = cashPaid - totalPayable; // we reduce this below
+    remaining1 = cashPaid - totalPayable; // we reduce this below
     for(var i=0; i<length; i++)
     {
       var coin = C.coins[i];
