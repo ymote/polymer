@@ -12,15 +12,14 @@ var opts = require("nomnom")
    }).parse();
    
 
-console.log( "input parameters", opts.solution,  opts.answer);
- 
+var errMsg="The solution is failed, the output array does not match the anwser";
  
 check(opts.solution, opts.answer, function(error, details){
     
     if(!error)
     {
-        assert.fail("The solution is failed, the output array is not match");
-        
+        assert.fail(opts.solution, opts.answer, errMsg,'not equal');
+
     }else
     {
         
