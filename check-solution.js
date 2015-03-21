@@ -1,3 +1,4 @@
+var assert=require('assert');
 var check = require("./compare-solution")
 
 var opts = require("nomnom")
@@ -18,12 +19,12 @@ check(opts.solution, opts.answer, function(error, details){
     
     if(!error)
     {
-        console.log("FAIL, cd The solution is failed, here is the difference", error, details.diff);
+        assert.fail("The solution is failed, the output array is not match");
         
     }else
     {
         
-        console.log("passing, the solution is passed");
+        console.log("Passed, the solution is passed");
     }
     
 })
