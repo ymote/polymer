@@ -1,6 +1,6 @@
-var check = require("../compare-solution")
+var check = require("compare-solution")
 
-check("array-solution.js", "array.js", function(error, details){
+check("array/array-solution.js", "array/array.js", function(error, details){
     
     if(!error)
     {
