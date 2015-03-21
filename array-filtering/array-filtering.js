@@ -3,7 +3,7 @@ var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 var filtered = numbers.filter(function (number) {
   // implement the array filtering operations here and retur
   
-  return (number%3) === 0;
+  return (number%2) === 0;
 
 });
 
